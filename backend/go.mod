@@ -1,4 +1,4 @@
-module gerador-hash
+module backend
 
 go 1.24.6
 
