@@ -9,6 +9,8 @@ import (
 	"backend/services"
 )
 
+// Health() - Camada HTTP
+// Responsável por receber a requisição e registrar o Health Check da aplicação.
 func Health(c *gin.Context) {
 	c.JSON(http.StatusOK, gin.H{
 		"status": "ok",
@@ -16,8 +18,10 @@ func Health(c *gin.Context) {
 	})
 }
 
+// GeneratePassword() - Camada HTTP
+// Responsável por receber a requisição, chamar a regra de negócio e devolver resposta ao cliente.
 func GeneratePassword(c *gin.Context) {
-	pass, err := services.GeneratePassword()
+	password, err := services.GeneratePassword()
 	if err != nil {
 		c.JSON(http.StatusInternalServerError, gin.H{
 			"error": "failed to generate password",
@@ -26,6 +30,6 @@ func GeneratePassword(c *gin.Context) {
 	}
 
 	c.JSON(http.StatusOK, gin.H{
-		"password": pass,
+		"password": password,
 	})
 }

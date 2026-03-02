@@ -6,6 +6,8 @@ import (
 	"github.com/gin-gonic/gin"
 )
 
+// main() - Ponto de entrada da aplicação.
+// Responsável por subir o servidor HTTP e registrar as rotas da aplicação.
 func main() {
 	r := gin.Default()
 

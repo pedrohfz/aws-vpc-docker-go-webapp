@@ -13,6 +13,8 @@ const (
 	symbols        = "!@#$%^&*()-_=+[]{};:,.?/"
 )
 
+// random() - Regra de Negócio
+// Escolhe um caractere aleatório de uma string, usando crypto/rand.
 func random(chars string) (byte, error) {
 	randomByte := make([]byte, 1)
 	if _, err := rand.Read(randomByte); err != nil {
@@ -21,6 +23,8 @@ func random(chars string) (byte, error) {
 	return chars[int(randomByte[0])%len(chars)], nil
 }
 
+// crypto() - Regra de Negócio
+// Retorna um inteiro aleatório entre 0 e max-1 usando crypto/rand.
 func crypto(max int) (int, error) {
 	randomByte := make([]byte, 1)
 	if _, err := rand.Read(randomByte); err != nil {
@@ -29,6 +33,8 @@ func crypto(max int) (int, error) {
 	return int(randomByte[0]) % max, nil
 }
 
+// shuffle() - Regra de Negócio
+// Embaralha o slice de bytes usando Fisher-Yates, com números aleatórios do crypto/rand.
 func shuffle(b []byte) error {
 	for i := len(b) - 1; i > 0; i-- {
 		j, err := crypto(i + 1)
@@ -40,6 +46,8 @@ func shuffle(b []byte) error {
 	return nil
 }
 
+// GeneratePassword() - Regra de Negócio
+// Responsável por gerar uma senha forte de 20 chars, com aleatoridade criptográfica.
 func GeneratePassword() (string, error) {
 	charset := lowerCase + upperCase + digits + symbols
 	passwordBytes := make([]byte, passwordLength)
