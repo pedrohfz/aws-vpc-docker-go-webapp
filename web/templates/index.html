@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Secure Password Generator V1</title>
+    <link rel="icon" type="image/png" href="/web/static/img/icon.png" />
+    <link rel="stylesheet" href="/web/static/css/style.css" />
+    <script>
+      window.BACKEND_URL = "{{ .BackendURL }}";
+    </script>
+  </head>
+  <body>
+    <main class="card">
+      <h1>> root@secure-generator:~$</h1>
+      <p class="sub">execute ./generate --secure --length=20</p>
+      <div class="row">
+        <input id="password" type="text" readonly />
+        <button id="copyBtn" class="secondary" disabled>Copiar</button>
+      </div>
+      <button id="genBtn">Gerar senha</button>
+      <p id="msg" class="msg"></p>
+    </main>
+    <script src="/web/static/js/app.js"></script>
+  </body>
+</html>

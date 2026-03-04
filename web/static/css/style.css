@@ -1,0 +1,91 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&display=swap");
+
+* {
+  box-sizing: border-box;
+  font-family: "Fira Code", monospace;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #000000;
+  color: #00ff88;
+}
+
+.card {
+  width: min(700px, 90vw);
+  background: #0a0a0a;
+  border: 1px solid #00ff88;
+  border-radius: 8px;
+  padding: 30px;
+  text-align: center;
+  box-shadow: 0 0 20px rgba(0, 255, 136, 0.2);
+}
+
+h1 {
+  margin-bottom: 10px;
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+
+.sub {
+  color: #00cc66;
+  margin-bottom: 25px;
+}
+
+.row {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+input {
+  flex: 1;
+  padding: 12px;
+  background: #000000;
+  border: 1px solid #00ff88;
+  color: #00ff88;
+  outline: none;
+  text-align: center;
+  font-size: 14px;
+}
+
+input:focus {
+  box-shadow: 0 0 10px #00ff88;
+}
+
+button {
+  padding: 12px;
+  background: transparent;
+  border: 1px solid #00ff88;
+  color: #00ff88;
+  cursor: pointer;
+  transition: 0.2s ease;
+  font-weight: bold;
+}
+
+button:hover {
+  background: #00ff88;
+  color: #000000;
+  box-shadow: 0 0 15px #00ff88;
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+#genBtn {
+  display: block;
+  margin: 20px auto 0 auto;
+  width: 200px;
+}
+
+.msg {
+  margin-top: 15px;
+  min-height: 20px;
+  color: #00ff88;
+}
