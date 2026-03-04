@@ -83,9 +83,3 @@ button:disabled {
   margin: 20px auto 0 auto;
   width: 200px;
 }
-
-.msg {
-  margin-top: 15px;
-  min-height: 20px;
-  color: #00ff88;
-}

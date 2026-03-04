@@ -12,7 +12,7 @@ func main() {
 	r := gin.Default()
 
 	r.LoadHTMLGlob("templates/*.html")
-	r.Static("/static", "./web/static")
+	r.Static("/static", "./static")
 
 	url := os.Getenv("BACKEND_URL")
 	if url == "" {
